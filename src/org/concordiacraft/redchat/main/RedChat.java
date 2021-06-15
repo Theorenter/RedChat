@@ -3,6 +3,7 @@ package org.concordiacraft.redchat.main;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.concordiacraft.redchat.listeners.ChatListener;
+import org.concordiacraft.redrealms.main.RedRealms;
 import org.concordiacraft.redutils.main.RedPlugin;
 import org.concordiacraft.redutils.utils.RedLog;
 
@@ -47,5 +48,9 @@ public class RedChat extends JavaPlugin implements RedPlugin {
     @Override
     public RedLog getRedLogger() {
         return redLog;
+    }
+
+    public static RedChat getPlugin()  {
+        return RedRealms.getPlugin(RedChat.class);
     }
 }

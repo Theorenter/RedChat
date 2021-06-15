@@ -67,6 +67,7 @@ public class ChatListener implements Listener {
         for (Player pl : Bukkit.getOnlinePlayers()) {
             pl.spigot().sendMessage(tMessage);
         }
+        RedChat.getPlugin().getRedLogger().debug(e.getPlayer().getName() + ": " + e.getMessage());
 
         /*TextComponent tc = new TextComponent();
 
